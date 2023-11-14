@@ -10,6 +10,12 @@ Room.belongsTo(User);
 User.hasMany(Message);
 Message.belongsTo(User);
 
+User.hasMany(Member);
+Member.belongsTo(User);
+
+Room.hasMany(Member);
+Member.belongsTo(Room);
+
 Room.hasMany(Message);
 Message.belongsTo(Room);
 
